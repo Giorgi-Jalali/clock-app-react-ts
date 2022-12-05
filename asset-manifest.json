@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.js": "/clock-app-react-ts/static/js/main.d058dae5.js",
+    "static/media/bg-image-nighttime.jpg": "/clock-app-react-ts/static/media/bg-image-nighttime.a9c730ff6f3e4a40519b.jpg",
+    "static/media/bg-image-daytime.jpg": "/clock-app-react-ts/static/media/bg-image-daytime.13c049fcfdc590ddcef0.jpg",
+    "static/media/icon-sun.svg": "/clock-app-react-ts/static/media/icon-sun.cb7a2aac3be7bf88b4cf17bd97d62fd2.svg",
+    "index.html": "/clock-app-react-ts/index.html",
+    "static/media/icon-refresh.svg": "/clock-app-react-ts/static/media/icon-refresh.a890f44f55065ff648dbbc598aa89af4.svg",
+    "static/media/icon-moon.svg": "/clock-app-react-ts/static/media/icon-moon.83b9f0dbe53bfaab2e1c6dc344545e9c.svg",
+    "static/media/icon-arrow-down.svg": "/clock-app-react-ts/static/media/icon-arrow-down.4d330a30a2190ce71512b306095fbf41.svg",
+    "main.d058dae5.js.map": "/clock-app-react-ts/static/js/main.d058dae5.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.d058dae5.js"
+  ]
+}
