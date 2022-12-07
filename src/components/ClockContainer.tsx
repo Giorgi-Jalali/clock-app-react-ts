@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 import styled from "styled-components";
 import countryID from "countries-and-timezones";
 
@@ -15,12 +17,21 @@ interface ArrowProps {
 }
 
 const ClockContainer = (props: Props) => {
-  const recentDate = new Date();
-  const hoursMinutes = recentDate.toLocaleString("en-US", {
-    hour: "numeric",
-    minute: "numeric",
-    hour12: false,
-  });
+  const [minutes, setMinutes] = useState<string | null>(null);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const recentDate = new Date();
+      const hoursMinutes = recentDate.toLocaleString("en-US", {
+        hour: "numeric",
+        minute: "numeric",
+        hour12: false,
+      });
+      setMinutes(hoursMinutes);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const location = Intl.DateTimeFormat().resolvedOptions().timeZone;
   const cityArr = location.split("/");
@@ -45,7 +56,7 @@ const ClockContainer = (props: Props) => {
           </Hello>
         </Greeting>
 
-        <Clock>{hoursMinutes}</Clock>
+        <Clock>{minutes}</Clock>
         <CityCountry>
           in {city}, {country.countries[0]}
         </CityCountry>
